@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+/* 1. Register the Variable Font */
+@font-face {
+  font-family: 'Inter Variable';
+  /* Make sure the path below matches your folder structure */
+  src: url('./Inter-VariableFont_opsz\,wght[1].woff2') format('woff2-variations');
+
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* 2. Apply it to your website */
+body {
+  font-family: 'Inter Variable', sans-serif;
+}
+
+body,
+html,
+#root {
+  width: 100%;
+  background-color: #000;
+}
+
+main {
+  position: relative;
+}
+
+section {
+  min-height: 100vh;
+  /* border: 2px solid rgb(255, 255, 255); */
+  position: relative;
+  z-index: 2;
+}
+
+#section-1 {
+  width: 100%;
+}
+
+#section-1 li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.section-1-div-wrapper {
+  width: 100%;
+  display: flex;
+  font-weight: 900;
+}
+
+.sideSection1 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  flex-direction: column;
+  align-items: end;
+  padding: 5vmax;
+}
+
+.sideSection2 {
+  width: 50%;
+  height: 100%;
+}
+
+
+.info-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-wrapper1 {
+  width: 50%;
+  padding: 5vmin;
+}
+
+.first-info-wrapper1 {
+  font-size: 20px;
+}
+
+.info-wrapper2 {
+  /* background-color: green; */
+  width: 50%;
+  padding: 5vmin;
+  padding-right: 20%;
+}
+
+.rotated-line {
+  width: 50%;
+  transform: rotate(45deg);
+  height: 1px;
+  opacity: 0.4;
+  background-color: #f00;
+}
+
+
+.bounce-animation {
+  animation: navbarBounce 0.8s ease-out;
+}
+
+#section-3 {
+  position: relative;
+  z-index: 0;
+}
+
+#section-3:hover~ {
+  background: red;
+}
+
+#section-3 .top {
+  position: relative;
+}
+
+#section-4{
+  position: relative;
+  z-index: 99;
+}
+
+.top,
+.btm {
+  width: 100%;
+}
+
+@keyframes navbarBounce {
+  0% {
+    transform: translateY(20%);
+  }
+
+  70% {
+    transform: translateY(-10%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+@media(orientation: portrait) {
+  .sideSection2 {
+    display: none;
+  }
+
+  .sideSection1 {
+    width: 100%;
+    align-items: start;
+    font-size: 70px;
+  }
+
+  .info-wrapper2 {
+    width: 100%;
+    padding: 5vmax;
+  }
+
+  .info-wrapper1 {
+    display: none;
+  }
+
+  .rotated-line {
+    display: none;
+  }
+}
